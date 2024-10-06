@@ -9,6 +9,7 @@ export const robotoCondensed = Roboto_Condensed({
 
 export const riftBold = localFont({
   src: "../assets/fonts/Rift-Bold.otf",
+  weight: "700",
   display: "swap",
   variable: "--rift-bold",
 });

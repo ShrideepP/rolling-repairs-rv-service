@@ -1,0 +1,210 @@
+@use "../../partials/breakpoints" as *;
+@use "../../partials/colours" as *;
+
+.main__header {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  z-index: 50;
+
+  .utility__bar {
+    padding-inline: 1.5rem;
+    padding-block: 0.75rem;
+    z-index: 50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $platinum;
+    background-color: white;
+  }
+
+  .utility__bar div:first-child {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+  }
+
+  .utility__bar div:first-child a {
+    font-size: 0.75rem;
+    color: $jet;
+    font-family: var(--roboto-condensed);
+    font-weight: 400;
+    line-height: 1.15em;
+    text-decoration: none;
+  }
+
+  .utility__bar div:first-child span {
+    font-weight: 500;
+  }
+
+  .utility__bar div:first-child a:hover span {
+    color: $prussian-blue;
+  }
+
+  .utility__bar div:first-child hr {
+    width: 2px;
+    height: 12px;
+    border: none;
+    background-color: $platinum;
+  }
+
+  .utility__bar div:last-child {
+    display: none;
+  }
+
+  .navigation__menu {
+    padding-inline: 1.5rem;
+    padding-block: 1.5rem;
+    z-index: 50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+  }
+
+  .navigation__menu button {
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    border: none;
+    background-color: $prussian-blue;
+  }
+
+  .navigation__menu svg {
+    width: 1rem;
+    height: 1rem;
+    color: white;
+  }
+
+  .navigation__menu div:last-child {
+    width: 100%;
+    padding-inline: 1.5rem;
+    padding-bottom: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: -50;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
+
+  .navigation__menu.expand div:last-child {
+    transform: translateY(0);
+  }
+
+  .navigation__menu.collapse div:last-child {
+    transform: translateY(-100%);
+  }
+
+  .navigation__menu div:last-child a {
+    padding-block: 1rem;
+    font-size: 1rem;
+    color: $jet;
+    font-family: var(--roboto-condensed);
+    font-weight: 500;
+    line-height: 1.15em;
+    text-decoration: none;
+    border-bottom: 1px solid $platinum;
+  }
+
+  .navigation__menu div:last-child a:hover {
+    color: $prussian-blue;
+  }
+
+  @media (min-width: $screens-md) {
+    .utility__bar {
+      padding-inline: 2.5rem;
+    }
+
+    .utility__bar div:first-child {
+      column-gap: 1.5rem;
+    }
+
+    .navigation__menu {
+      padding-inline: 2.5rem;
+    }
+
+    .navigation__menu div:last-child {
+      padding-inline: 2.5rem;
+    }
+  }
+
+  @media (min-width: $screens-lg) {
+    .utility__bar {
+      padding-inline: 9rem;
+      padding-block: 0;
+    }
+
+    .utility__bar div:first-child a {
+      font-size: 1rem;
+    }
+
+    .utility__bar div:first-child hr {
+      height: 16px;
+    }
+
+    .utility__bar div:last-child {
+      display: flex;
+      align-items: center;
+      column-gap: 2rem;
+    }
+
+    .utility__bar div:last-child a {
+      width: 2rem;
+      height: 2rem;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+    }
+
+    .utility__bar div:last-child a:hover {
+      background-color: $prussian-blue;
+    }
+
+    .utility__bar div:last-child a svg {
+      width: 1rem;
+      height: 1rem;
+      color: $jet;
+    }
+
+    .utility__bar div:last-child a:hover svg {
+      color: white;
+    }
+
+    .navigation__menu {
+      padding-inline: 9rem;
+      padding-block: 3rem;
+    }
+
+    .navigation__menu button {
+      display: none;
+    }
+
+    .navigation__menu div:last-child {
+      width: fit-content;
+      padding-inline: 0;
+      padding-bottom: 0;
+      position: unset;
+      z-index: unset;
+      flex-direction: row;
+      column-gap: 3rem;
+      background-color: unset;
+    }
+
+    .navigation__menu.collapse div:last-child {
+      transform: translateY(0);
+    }
+
+    .navigation__menu div:last-child a {
+      padding-block: 0;
+      border-bottom: none;
+    }
+  }
+}

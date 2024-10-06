@@ -1,0 +1,19 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  font-family: var(--roboto-condensed);
+  background-color: white;
+}

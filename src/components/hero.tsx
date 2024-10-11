@@ -16,7 +16,7 @@ export default function Hero() {
           </h4>
         </div>
 
-        <Link href="/schedule-service">
+        <Link href="/book-appointment">
           <Button type="button" variant="secondary">
             Schedule Service
           </Button>

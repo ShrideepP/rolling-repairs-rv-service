@@ -13,7 +13,9 @@ export default function RoadsideAssistance() {
         </p>
       </div>
       <div className={styles["roadside__assistance__button-container"]}>
-        <Button variant="tertiary">Get Help Now</Button>
+        <a href="tel:+15559876543">
+          <Button variant="tertiary">Get Help Now</Button>
+        </a>
       </div>
     </section>
   );

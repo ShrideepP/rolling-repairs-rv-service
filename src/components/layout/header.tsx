@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 import styles from "@/styles/components/layout/header.module.scss";
 
@@ -9,6 +10,8 @@ import { Button } from "../ui/button";
 
 export default function Header() {
   const [menu, setMenu] = useState(false);
+
+  const router = useRouter();
 
   const toggleMenu = () => setMenu(!menu);
 
@@ -35,7 +38,9 @@ export default function Header() {
             <Instagram />
           </a>
 
-          <Button>Schedule Service</Button>
+          <Button onClick={() => router.push("/book-appointment")}>
+            Schedule Service
+          </Button>
         </div>
       </div>
 

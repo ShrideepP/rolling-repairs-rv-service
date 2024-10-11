@@ -16,7 +16,7 @@ export default function CTA() {
       </div>
 
       <div className={styles["cta__button-container"]}>
-        <Link href="/schedule-service">
+        <Link href="/book-appointment">
           <Button variant="tertiary">Book Service Now</Button>
         </Link>
       </div>

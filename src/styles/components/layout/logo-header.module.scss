@@ -1,0 +1,19 @@
+@use "../../partials/breakpoints" as *;
+@use "../../partials/colours" as *;
+
+.logo__header {
+  width: 100%;
+  height: fit-content;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $platinum;
+
+  @media (min-width: $screens-md) {
+    padding-inline: 2.5rem;
+  }
+
+  @media (min-width: $screens-lg) {
+    padding: 3rem 9rem;
+  }
+}

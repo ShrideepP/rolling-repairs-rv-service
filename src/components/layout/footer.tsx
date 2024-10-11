@@ -1,37 +1,47 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+
 import styles from "@/styles/components/layout/footer.module.scss";
 
 import Link from "next/link";
 
 export default function Footer() {
+  const pathname = usePathname();
+
+  console.log(pathname);
+
   return (
     <footer className={styles.footer}>
-      <div className={styles.footer__links}>
-        <div />
+      {pathname === "/" && (
+        <div className={styles.footer__links}>
+          <div />
 
-        <div className={styles["footer__links-group"]}>
-          <a href="#services" className={styles["footer__links-group-link"]}>
-            Services
-          </a>
-          <a
-            href="#why-choose-us"
-            className={styles["footer__links-group-link"]}
-          >
-            Why Choose Us
-          </a>
-          <a
-            href="#testimonials"
-            className={styles["footer__links-group-link"]}
-          >
-            Testimonials
-          </a>
-          <a href="#about-us" className={styles["footer__links-group-link"]}>
-            About Us
-          </a>
-          <a href="#faq" className={styles["footer__links-group-link"]}>
-            FAQ
-          </a>
+          <div className={styles["footer__links-group"]}>
+            <a href="#services" className={styles["footer__links-group-link"]}>
+              Services
+            </a>
+            <a
+              href="#why-choose-us"
+              className={styles["footer__links-group-link"]}
+            >
+              Why Choose Us
+            </a>
+            <a
+              href="#testimonials"
+              className={styles["footer__links-group-link"]}
+            >
+              Testimonials
+            </a>
+            <a href="#about-us" className={styles["footer__links-group-link"]}>
+              About Us
+            </a>
+            <a href="#faq" className={styles["footer__links-group-link"]}>
+              FAQ
+            </a>
+          </div>
         </div>
-      </div>
+      )}
 
       <div className={styles.footer__legal}>
         <p className={styles["footer__legal-text"]}>

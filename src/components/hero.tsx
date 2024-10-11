@@ -1,6 +1,7 @@
 import styles from "@/styles/components/hero.module.scss";
 
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -15,7 +16,11 @@ export default function Hero() {
           </h4>
         </div>
 
-        <Button variant="secondary">Schedule Service</Button>
+        <Link href="/schedule-service">
+          <Button type="button" variant="secondary">
+            Schedule Service
+          </Button>
+        </Link>
       </div>
     </section>
   );

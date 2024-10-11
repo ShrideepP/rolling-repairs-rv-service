@@ -1,6 +1,7 @@
 import styles from "@/styles/components/cta.module.scss";
 
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 export default function CTA() {
   return (
@@ -13,8 +14,11 @@ export default function CTA() {
           way.
         </p>
       </div>
+
       <div className={styles["cta__button-container"]}>
-        <Button variant="tertiary">Book Service Now</Button>
+        <Link href="/schedule-service">
+          <Button variant="tertiary">Book Service Now</Button>
+        </Link>
       </div>
     </section>
   );

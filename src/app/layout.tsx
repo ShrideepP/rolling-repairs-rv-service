@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { riftBold, robotoCondensed } from "@/lib/fonts";
 import "@/styles/main.scss";
 
+import ChatWidget from "@/components/chat-widget";
+
 export const metadata: Metadata = {
   title:
     "Expert RV Repairs in Boulder, CO | Rolling Repairs - 24/7 Emergency RV Service",
@@ -14,6 +16,8 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
     <html lang="en">
       <body className={`${riftBold.variable} ${robotoCondensed.variable}`}>
         {children}
+
+        <ChatWidget />
       </body>
     </html>
   );
